@@ -1,0 +1,174 @@
+:root{
+  --ink:#1f2733;
+  --navy:#2c3648;
+  --accent:#3d4f6b;
+  --line:#d7dbe2;
+  --muted:#5a6472;
+  --paper:#ffffff;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial, sans-serif;
+  color:var(--ink);
+  background:#eef0f3;
+}
+.page{
+  max-width:800px;
+  margin:40px auto;
+  background:var(--paper);
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  padding:0 0 48px 0;
+}
+
+/* HEADER */
+header{
+  background:var(--navy);
+  color:#fff;
+  padding:40px 48px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+header img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid rgba(255,255,255,0.6);
+  flex-shrink:0;
+}
+header h1{
+  margin:0 0 6px 0;
+  font-size:32px;
+  letter-spacing:1px;
+  font-weight:700;
+}
+header p{
+  margin:0;
+  font-size:15px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#c7cedb;
+}
+
+/* CONTACT BAR */
+.contact-bar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0;
+  background:var(--accent);
+  color:#fff;
+  font-size:13.5px;
+}
+.contact-bar div{
+  padding:12px 24px;
+  flex:1;
+  min-width:180px;
+  border-right:1px solid rgba(255,255,255,0.15);
+}
+.contact-bar div:last-child{border-right:none;}
+.contact-bar strong{
+  display:block;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#d6dbe6;
+  margin-bottom:2px;
+}
+
+main{padding:8px 48px 0 48px;}
+
+section{margin-top:34px;}
+
+h2{
+  font-size:19px;
+  color:var(--navy);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-bottom:2px solid var(--navy);
+  padding-bottom:8px;
+  margin:0 0 20px 0;
+}
+
+/* EXPERIENCE / FORMATION ITEMS */
+.item{
+  position:relative;
+  padding-left:26px;
+  margin-bottom:22px;
+  border-left:2px solid var(--line);
+}
+.item::before{
+  content:"";
+  position:absolute;
+  left:-7px;
+  top:4px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--navy);
+}
+.item:last-child{margin-bottom:0;}
+.item h3{
+  margin:0 0 2px 0;
+  font-size:16px;
+  color:var(--ink);
+}
+.item .date{
+  font-size:13px;
+  color:var(--muted);
+  font-weight:600;
+  margin-bottom:4px;
+}
+.item .place{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* SKILLS / LANGUAGES / HOBBIES */
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.chip{
+  background:#eef0f3;
+  color:var(--navy);
+  border:1px solid var(--line);
+  padding:7px 14px;
+  border-radius:20px;
+  font-size:13.5px;
+}
+
+.langues{
+  display:flex;
+  gap:40px;
+}
+.langues div span{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:3px;
+}
+.langues div strong{
+  font-size:15px;
+  color:var(--ink);
+}
+
+.hobbies-text{
+  font-size:14.5px;
+  color:var(--ink);
+  line-height:1.6;
+}
+
+@media (max-width:600px){
+  .page{margin:0;box-shadow:none;}
+  header{flex-direction:column;text-align:center;padding:32px 24px;}
+  main{padding:8px 24px 0 24px;}
+  .contact-bar div{border-right:none;border-bottom:1px solid rgba(255,255,255,0.15);}
+  .langues{flex-direction:column;gap:12px;}
+}
